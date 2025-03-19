@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f2ff;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .symptoms-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Added a larger shadow */
+    width: 450px; /* Increased the width of the card */
+    z-index: 10;
+    text-align: center; /* Center the text */
+  }
+  
+  .symptoms-form h2 {
+    color: #34a853;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .symptoms-form p {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .symptoms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .symptoms label {
+    flex: 0 0 48%;
+    margin-bottom: 15px; /* Increased the spacing between labels */
+    font-size: 16px; /* Increased font size for better readability */
+  }
+
+  .symptoms {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for checkboxes */
+    gap: 10px; /* Spacing between checkboxes */
+    margin-top: 20px;
+  }
+  
+  .symptoms label {
+    display: flex;
+    align-items: center; /* Vertically aligns the checkbox and label text */
+    font-size: 16px; /* Increased font size for better readability */
+  }
+  
+  .symptoms input[type="checkbox"] {
+    margin-right: 10px; /* Adds space between the checkbox and the label text */
+  }
+  
+  
+  .buttons {
+    text-align: center;
+    margin-top: 30px; /* Added more margin above buttons */
+  }
+  
+  .buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 25px; /* Increased button size */
+    border-radius: 8px; /* Made buttons more rounded */
+    cursor: pointer;
+    margin: 0 15px; /* Increased spacing between buttons */
+    font-size: 16px;
+  }
+  
+  .buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .image-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./service.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+  
+  .image-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Added a dark shade overlay */
+    z-index: 2;
+  }
+  
+  .popup {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 20;
+  }
+  
+  .popup.hidden {
+    display: none;
+  }
+  
+  .report {
+    background-color: #ffe9b3;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .report.hidden {
+    display: none;
+  }
+  
+  .report-content {
+    color: #333;
+  }
+  

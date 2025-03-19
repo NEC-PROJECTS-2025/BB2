@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Abnormality Prediction</title>
+  <link rel="stylesheet" href="./service.css">
+</head>
+<body>
+  <div class="container">
+    <div class="symptoms-form">
+      <h2>Heart Abnormality Symptoms</h2>
+      <p>Select symptoms that apply to you.</p>
+      <p>A brief description will be displayed when you hover over a symptom.</p>
+      
+      <form id="symptomForm">
+        <div class="symptoms">
+          <label>
+            <input type="checkbox" name="symptom" value="Palpitations" onmouseover="showDescription('Palpitations')" onmouseout="hideDescription()">
+            Palpitations
+          </label>
+          <label>
+            <input type="checkbox" name="symptom" value="Chest Discomfort" onmouseover="showDescription('Chest Discomfort')" onmouseout="hideDescription()">
+            Chest Discomfort
+          </label>
+          <label>
+            <input type="checkbox" name="symptom" value="Dizziness/Fainting" onmouseover="showDescription('Dizziness/Fainting')" onmouseout="hideDescription()">
+            Dizziness/Fainting
+          </label>
+          <label>
+            <input type="checkbox" name="symptom" value="Fatigue" onmouseover="showDescription('Fatigue')" onmouseout="hideDescription()">
+            Fatigue
+          </label>
+          <label>
+            <input type="checkbox" name="symptom" value="Shortness of Breath" onmouseover="showDescription('Shortness of Breath')" onmouseout="hideDescription()">
+            Shortness of Breath
+          </label>
+          <label>
+            <input type="checkbox" name="symptom" value="Swelling in Legs/Feet" onmouseover="showDescription('Swelling in Legs/Feet')" onmouseout="hideDescription()">
+            Swelling in Legs/Feet
+          </label>
+          <label>
+            <input type="checkbox" name="symptom" value="Irregular Heartbeat" onmouseover="showDescription('Irregular Heartbeat')" onmouseout="hideDescription()">
+            Irregular Heartbeat
+          </label>
+        </div>
+        
+        <div class="buttons">
+          <button type="button" onclick="submitSymptoms()">Submit</button>
+          <button type="button" onclick="showReport()">Show Report</button>
+        </div>
+      </form>
+
+      <div id="report" class="report hidden">
+        <p class="report-content">Based on your symptoms, further medical evaluation is recommended.</p>
+      </div>
+    </div>
+    <div class="image-section"></div>
+
+    <div id="symptomPopup" class="popup hidden">
+      <p id="popupText"></p>
+    </div>
+  </div>
+
+  <script src="./service.js"></script>
+</body>
+</html>
+
